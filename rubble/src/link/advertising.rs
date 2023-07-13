@@ -345,7 +345,7 @@ pub struct ConnectRequestData {
     timeout: Duration,
     chm: ChannelMap,
     hop: u8,
-    sca: SleepClockAccuracy,
+    _sca: SleepClockAccuracy,
 }
 
 impl ConnectRequestData {
@@ -430,7 +430,7 @@ impl FromBytes<'_> for ConnectRequestData {
                 sca = (hop_and_sca >> 5) & 0b111;
                 hop_and_sca & 0b11111
             },
-            sca: {
+            _sca: {
                 use self::SleepClockAccuracy::*;
                 match sca {
                     0 => Ppm251To500,

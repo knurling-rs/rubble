@@ -76,6 +76,7 @@ impl Uuid128 {
             ($s:ident[$i:ident..]) => {{
                 match $s.as_bytes()[$i] {
                     b'-' => {}
+                    #[allow(unconditional_panic)]
                     _ => [()][expected_dash],
                 }
                 $i += 1;
@@ -105,6 +106,7 @@ impl Uuid128 {
 
         // String must end here.
         if s.len() > index {
+            #[allow(unconditional_panic)]
             [()][unexpected_trailing_data];
         }
 
