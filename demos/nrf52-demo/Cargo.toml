@@ -21,11 +21,11 @@ bbqueue = "0.4"
 rtt-target = { version = "0.3.0", features = ["cortex-m"] }
 panic-rtt-target = { version = "0.1.1", features = ["cortex-m"] }
 
-nrf52810-hal = { version = "0.14", features = ["rt"], optional = true }
-nrf52811-hal = { version = "0.14", features = ["rt"], optional = true }
-nrf52832-hal = { version = "0.14", features = ["rt"], optional = true }
-nrf52833-hal = { version = "0.14", features = ["rt"], optional = true }
-nrf52840-hal = { version = "0.14", features = ["rt"], optional = true }
+nrf52810-hal = { version = "0.16", features = ["rt"], optional = true }
+nrf52811-hal = { version = "0.16", features = ["rt"], optional = true }
+nrf52832-hal = { version = "0.16", features = ["rt"], optional = true }
+nrf52833-hal = { version = "0.16", features = ["rt"], optional = true }
+nrf52840-hal = { version = "0.16", features = ["rt"], optional = true }
 
 [dependencies.log]
 version = "0.4.8"
